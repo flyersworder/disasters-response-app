@@ -84,7 +84,7 @@ def build_model():
 
     parameters = {
         'clf__n_estimators': [100, 200, 300],
-        'clf__min_samples_split': [2, 3],
+        'clf__min_samples_split': [2, 3, 4],
         'clf__max_features': ['sqrt', 'log2'],
         'clf__criterion' :['gini', 'entropy']
     }
