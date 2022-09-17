@@ -19,3 +19,5 @@ This project first sets up a ETL pipeline to read and clean the disaster respons
 2. This repository only provides a minimal model. To achieve the best performance, better to do a more thorough grid search.
 
 3. If we do need to store a large model, [this service](https://git-lfs.github.com/) can come in handy.
+
+4. The web app now takes some time to load because of the apply function (to generate the word count), even though I try to use [swifter](https://github.com/jmcarpenter2/swifter) to speed up the process.
