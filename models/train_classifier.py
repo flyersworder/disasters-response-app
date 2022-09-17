@@ -55,7 +55,7 @@ def tokenize(text):
     text = re.sub(r"[^a-zA-Z0-9]", " ", text) 
     
     tokens = word_tokenize(text)
-    tokens = [w for w in tokens if w not in stopwords.words("english")]
+    tokens = [w for w in tokens if w.lower() not in stopwords.words("english")]
     lemmatizer = WordNetLemmatizer()
 
     clean_tokens = []
