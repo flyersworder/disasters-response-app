@@ -83,10 +83,10 @@ def build_model():
     ])
 
     parameters = {
-        'clf__n_estimators': [10],
-        'clf__min_samples_split': [2],
-        #'clf__max_features': ['sqrt', 'log2'],
-        #'clf__criterion' :['gini', 'entropy']
+        'clf__n_estimators': [100, 200, 300],
+        'clf__min_samples_split': [2, 3],
+        'clf__max_features': ['sqrt', 'log2'],
+        'clf__criterion' :['gini', 'entropy']
     }
 
     cv = GridSearchCV(pipeline, param_grid=parameters)
@@ -131,7 +131,7 @@ def save_model(model, model_filepath):
                     None
     '''   
     
-    joblib.dump(model.best_estimator_, model_filepath, compress=9)
+    joblib.dump(model.best_estimator_, model_filepath, compress=3)
 
 def main():
     if len(sys.argv) == 3:
